@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="checkCookie()">
+
+    <!-- <button type="button" onclick="setCookie()">Set Cookie</button>
+    <button type="button" onclick="getCookie()">Get Cookie</button> -->
+
+    <script>
+        // function setCookie() {
+        //     document.cookie = 'username=joonlee'
+        //     document.cookie = 'password=sandi'
+        //     alert('Cookie has been saved.')
+        // }
+
+        // function getCookie() {
+        //     if (document.cookie.length != 0) {
+        //         alert(document.cookie)
+        //         var cookies = document.cookie.split('::')
+        //         alert(cookies[0] + ' and ' + cookies[1])
+        //     } else {
+        //         alert('Cookie is not available.')
+        //     }
+        // }
+
+        function createCookie(cookieName, cookieValue, daysToExpire) {
+            var date = new Date()
+            date.setTime(date.getTime() + (daysToExpire*24*60**60*1000))
+            document.cookie = `${cookieName}=${cookieValue};expires=${date.toString()}`
+            alert('your cookie is saved now.')
+        }
+
+        function accessCookie(cookieName) {
+            var name = cookieName + '='
+            var allCookies = document.cookie.split(';')
+            for (i = 0; i < allCookies.length; i++) {
+                var ck = allCookies[i].trim()
+                if (ck.indexOf(name) == 0) {
+                    return ck.substring(name.length, ck.length)
+                }
+            }
+            return ''
+        }
+
+        function checkCookie() {
+            var user = accessCookie('age')
+            if (user != '') {
+                alert('Welcome ' + user)
+            } else {
+                var value = prompt('Please enter your age: ')
+                var duration = prompt('How long do you want to store your age?')
+                if (value != '' && value != null) {
+                    createCookie('age', value, duration)
+                }
+                // alert('Cookie does not exist.')
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
