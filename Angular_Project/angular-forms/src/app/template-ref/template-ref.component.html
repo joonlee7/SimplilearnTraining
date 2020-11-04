@@ -1,0 +1,11 @@
+<div>
+    <input #uname type="text" name="uname"/>
+    <br />
+    <button (click)="fun(uname.value)">Click Here</button>
+    <hr>
+    Welcome {{fname}}
+    <hr>
+    <input #msg type="text" (keyup)='0'/>
+    <br />
+    {{msg.value}}
+</div>
