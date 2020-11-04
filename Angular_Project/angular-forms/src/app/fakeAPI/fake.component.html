@@ -1,0 +1,23 @@
+<div>
+    <h2>Angular Service</h2>
+    <input type="button" value="Call Function 1" (click)="fun1()">
+    {{msg1}}
+    <br /><br />
+    <input type="button" value="Call Function 2" (click)="fun2()">
+    {{msg2}}
+
+    <table border="1">
+        <tr>
+            <th>User ID</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Completed</th>
+        </tr>
+        <tr *ngFor="let obj of fakeObj">
+            <td>{{obj.userId}}</td>
+            <td>{{obj.id}}</td>
+            <td>{{obj.title}}</td>
+            <td>{{obj.completed}}</td>
+        </tr>
+    </table>
+</div>

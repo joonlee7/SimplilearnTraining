@@ -1,7 +1,5 @@
 <div>
-
     <h2>Login form using Template Driven Form</h2>
-
     <form #userRef="ngForm" (ngSubmit)="checkLogin(userRef.value)" novalidate>
         <input type="text" placeholder="Enter Username" name="username" ngModel required #nameRef="ngModel"
             minlength="3">
@@ -15,9 +13,7 @@
                 Username must be at least 3 characters
             </span>
         </div>
-
         <br /><br />
-
         <input type="password" placeholder="Enter Password" name="password" ngModel required #passRef="ngModel"
             pattern="\d{3}@\D{3}" />
         <div *ngIf="passRef.errors && (passRef.dirty || passRef.touched)">
@@ -30,14 +26,9 @@
                 Password must be follow pattern 123@ABC
             </span>
         </div>
-
         <br /><br />
-
         <input type="submit" value="Login" [disabled]='!userRef.valid'>
     </form>
-
     <br />
-
     {{msg}}
-
 </div>
