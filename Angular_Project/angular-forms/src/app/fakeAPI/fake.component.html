@@ -5,7 +5,25 @@
     <br /><br />
     <input type="button" value="Call Function 2" (click)="fun2()">
     {{msg2}}
-
+    <br /><br />
+    <input type="button" value="Call Function 3" (click)="loadEmpDetails()">
+    <br />
+    Id is {{this.id}}
+    Name is {{this.name}}
+    Salary is {{this.salary}}
+    <br /><br />
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr *ngFor="let emp of employeeDetails">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </table>
     <table border="1">
         <tr>
             <th>User ID</th>
