@@ -9,6 +9,7 @@ import { MdFormComponent } from './md-form/md-form.component';
 import { FakeComponent } from './fakeAPI/fake.component';
 import { FakeService2 } from './fake.service2';
 import { HttpClientModule } from "@angular/common/http";
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from "@angular/common/http";
     TemplateRefComponent,
     TdFormComponent,
     MdFormComponent,
-    FakeComponent
+    FakeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
