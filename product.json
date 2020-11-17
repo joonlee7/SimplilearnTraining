@@ -1,0 +1,7 @@
+{"product":[
+	{"pid":100,"pname":"TV","price":4000},
+	{"pid":101,"pname":"Desktop PC","price":2000},
+	{"pid":102,"pname":"Smartphone","price":1000},
+	{"pid":103,"pname":"Laptop","price":1000},
+	{"pid":104,"pname":"Tablet","price":800}
+]}
